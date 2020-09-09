@@ -1,0 +1,46 @@
+body {
+    background:url(/assets/images/login_bg.jpg);
+    background-size: cover;
+}
+header.layui-main {
+    margin-top: 20px;
+}
+.main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400px;
+    height: 310px;
+    background-color: #fff;
+}
+.title {
+    width: 100%;
+    height: 60px;
+    background:url(/assets/images/login_title.png) no-repeat center;
+}
+form div{
+    position: relative;
+    width: 340px;
+    height: 38px;
+    margin: 0 auto 20px;
+}
+form input {
+    width: 340px!important;
+    height: 38px!important;
+    padding-left: 35px!important;
+}
+.layui-btn {
+    display: block;
+    width: 340px;
+    height: 38px;
+    margin: 0 auto;
+}
+form i {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+/* .reglink {
+
+} */
