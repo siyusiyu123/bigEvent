@@ -15,20 +15,48 @@
     </header>
     <section class="main">
         <div class="title"></div>
-        <form>
-            <div>
-                <i class="layui-icon layui-icon-username"></i>
-                <input type="text" id="user" class='layui-input' placeholder="请输入用户名"></div>
-            <div>
-                <i class="layui-icon layui-icon-password"></i>
-                <input type="password" id="password" placeholder="请输入密码" class="layui-input">
+        <!-- 登录部分 -->
+        <form id="form_denglu">
+            <div class="denglu">
+                <div>
+                    <i class="layui-icon layui-icon-username"></i>
+                    <input type="text" id="user" class='layui-input' placeholder="请输入用户名"></div>
+                <div>
+                    <i class="layui-icon layui-icon-password"></i>
+                    <input type="password" id="password" placeholder="请输入密码" class="layui-input">
+                </div>
+                <div class="layui-form-item"><button class="layui-btn layui-btn-normal" lay-submit
+                        lay-filter="formDemo">登录</button>
+                </div>
+                <div class="layui-form-item reglink">
+                    <a href="javascript:;" id='to_zhuce'>去注册账号</a>
+                </div>
             </div>
-            <button class="layui-btn layui-btn-normal">登录</button>
         </form>
-        <div class="layui-form-item reglink">
-            <a href="javascript:;"></a>
-        </div>
+        <!-- 注册部分 -->
+        <form id="form_zhuce" style="display: none">
+            <div class="zhuce">
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-username"></i><input type="text" name="username"
+                        placeholder="请输入用户名" autocomplete="off" class="layui-input"></div>
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i><input type="password" name="password"
+                        placeholder="请输入密码" autocomplete="off" class="layui-input"></div>
+                <div class="layui-form-item">
+                    <i class="layui-icon layui-icon-password"></i><input type="password" name="repassword"
+                        placeholder="请再次输入密码" autocomplete="off" class="layui-input"></div>
+                <div class="layui-form-item"><button class="layui-btn layui-btn-normal" lay-submit
+                        lay-filter="formDemo">注册</button>
+                </div>
+                <div class="layui-form-item loglink">
+                    <a href="javascript:;" id='to_denglu'>去登录</a>
+                </div>
+            </div>
+        </form>
     </section>
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <script src="/assets/lib/jquery.js"></script>
+    <script src="/assets/js/login.js"></script>
 </body>
 
 </html>

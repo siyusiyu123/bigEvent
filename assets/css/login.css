@@ -41,6 +41,7 @@ form i {
     top: 10px;
     left: 10px;
 }
-/* .reglink {
-
-} */
+.reglink,.loglink {
+    display: flex;
+    justify-content: flex-end;
+}
