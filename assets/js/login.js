@@ -1,5 +1,6 @@
 $(function () {
     // 点击去注册
+    localStorage.removeItem('token');
     $('#to_zhuce').on('click', function () {
         $('#form_zhuce').show();
         $('#form_denglu').hide();
@@ -53,7 +54,6 @@ $(function () {
             url: '/api/login',
             data,
             success: function (res) {
-                console.log(res);
                 if (res.status !== 0) {
                     return layer.msg('用户名或密码错误')
                 }

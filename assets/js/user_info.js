@@ -1,8 +1,10 @@
 $(function () {
     var Id;
     var xiu = window.parent;
-    xiu.getQingQiu(function (res) {
+    xiu.QingQiu('GET', '/my/userinfo', function (res) {
         $('#form_change [name=username]').val(res.data.username);
+        $('#form_change [name=nickname]').val(res.data.nickname);
+        $('#form_change [name=email]').val(res.data.email);
         Id = res.data.id;
     })
     $('#form_change').on('submit', function () {
@@ -11,8 +13,8 @@ $(function () {
             nickname: $('#form_change [name=nickname]').val(),
             email: $('#form_change [name=email]').val()
         }
-        xiu.postQingQiu(function (res) { }, data);
-        xiu.getQingQiu(window.parent.huanying);
+        xiu.QingQiu('POST', '/my/userinfo', () => { }, data);
+        xiu.QingQiu('GET', '/my/userinfo', xiu.huanying);
     })
 
 
