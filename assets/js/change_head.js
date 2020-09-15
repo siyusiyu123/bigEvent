@@ -39,10 +39,10 @@ $('#queding').on('click', function () {
     var data = {
         avatar: dataURL
     }
-    xiu.QingQiu('POST', '/my/update/avatar', function (res) {
+    QingQiu('POST', '/my/update/avatar', function (res) {
         console.log(666);
         console.log(res);
-        xiu.QingQiu('GET', '/my/userinfo', xiu.huanying);
+        QingQiu('GET', '/my/userinfo', xiu.huanying);
         layer.msg(res.message);
     }, data);
 

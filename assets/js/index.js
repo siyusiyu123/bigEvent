@@ -50,20 +50,6 @@ function huanying(res) {
         $('.touxiang').html(res.data.username[0].toUpperCase()).show();
     }
 }
-// ajax 请求函数 第一个参数为请求方式, 第二个为地址, 第三个为响应数据的处理函数, 第四个为传参
-function QingQiu(fangshi, address, callback, datas) {
-    $.ajax({
-        type: fangshi,
-        url: address,
-        data: datas || '',
-        success: function (res) {
-            if (res.status !== 0) {
-                return layer.msg(res.message)
-            }
-            callback(res);
-        }
-    })
-}
 // function postQingQiu(fangshi, address, callback, datas) {
 //     $.ajax({
 //         type: fangshi,
